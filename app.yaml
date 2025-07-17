@@ -1,0 +1,17 @@
+runtime: python311
+entrypoint: gunicorn -b :$PORT main:app
+
+instance_class: F2
+
+env_variables:
+  AUTH0_DOMAIN: 
+  AUTH0_CLIENT_ID: 
+  AUTH0_CLIENT_SECRET: 
+  AUTH0_AUDIENCE: 
+  GCS_BUCKET_NAME: 
+
+handlers:
+- url: /static
+  static_dir: static
+- url: /.*
+  script: auto
