@@ -301,4 +301,4 @@ All endpoints return consistent error messages for common HTTP status codes:
 | 404 | `{"Error": "Not found"}` |
 | 409 | `{"Error": "Enrollment data is invalid"}` |
 
----
+
